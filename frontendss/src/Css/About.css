@@ -1,0 +1,120 @@
+/* General Styles */
+.section {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Team Section */
+.team-card {
+  background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  text-align: center;
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px); /* Moves card up */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #ff512f, #dd2476); /* Change gradient color on hover */
+}
+
+.team-card:hover img {
+  transform: scale(1.1); /* Slight zoom effect on image */
+}
+
+.team-card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.team-card p {
+  font-size: 1.1rem;
+}
+
+/* Workflow Section */
+.step-box {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  text-align: center;
+}
+
+.step-box:hover {
+  transform: translateY(-10px); /* Moves step box up */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #24c6dc, #514a9d); /* Change gradient color on hover */
+}
+
+.step-box .step-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.step-box p {
+  font-size: 1.2rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .team-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-card p {
+    font-size: 1rem;
+  }
+
+  .step-box {
+    padding: 15px;
+  }
+
+  .step-box .step-number {
+    font-size: 2rem;
+  }
+
+  .step-box p {
+    font-size: 1.1rem;
+  }
+}
