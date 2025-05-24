@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const multer = require("multer");
 const sendQuote = require("./Controllers/sendQuote");
+const sendOrder=require("./Controllers/sendOrder")
 const cors = require('cors');
 const connectedDB = require("../backend/Config/db")
 const users = require("./Routers/route")
@@ -23,6 +24,7 @@ app.use('/api',users)
 
 const sendMail = require('./Controllers/sendMail');
 app.post('/send-quote', upload.single('file'), sendQuote);
+app.post('/sendorder', sendOrder);
 app.post('/send', sendMail); // ✅ Make sure it's POST
 
 app.get('/', (req,res)=>{

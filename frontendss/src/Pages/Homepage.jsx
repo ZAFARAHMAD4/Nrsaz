@@ -7,6 +7,13 @@ import logoDesignImg from '../Images/logodesign.png';
 import graphicDesignImg from '../Images/Motiongraphic.png';
 import pptDesignImg from '../Images/posterdesign.png';
 import videoEditingImg from '../Images/videoediting.png';
+
+
+// portfolio img
+import portfolio1 from '../Images/arihaportfolio.png'
+import portfolio2 from '../Images/miznaportfolio.png'
+
+
 function Homepage() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -20,12 +27,17 @@ const services = [
   { title: 'Video Editing', img: videoEditingImg }
 ];
   const portfolios = [
-    '/images/portfolio1.jpg',
-    '/images/portfolio2.jpg',
-    '/images/portfolio3.jpg',
-    '/images/portfolio4.jpg',
-    '/images/portfolio5.jpg',
-    '/images/portfolio6.jpg'
+    {
+      title: 'Ariha Portfolio',
+      img:portfolio1,
+      link:'https://ariha-portfolio.my.canva.site/ariha-naaz-portfolio'
+    },
+    {
+      title: 'Mizna Ansari Portfolio',
+      img:portfolio2,
+      link:'https://www.mizna.me/',
+    },
+
   ];
 
   const testimonials = [
@@ -44,7 +56,7 @@ const services = [
 
       {/* Services Section */}
       <section className="section" id="services">
-        <h2 data-aos="fade-up">Our Services</h2>
+        <h2 data-aos="fade-up">Gallery of Our Services</h2>
         <div className="container">
           <div className="row">
             {services.map((s, i) => (
@@ -67,7 +79,12 @@ const services = [
             {portfolios.map((img, i) => (
               <div key={i} className="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div className="portfolio-img-container">
-                  <img src={img} alt={`Portfolio ${i + 1}`} className="portfolio-img" />
+                  <img src={img.img} alt={`Portfolio ${i + 1}`} className="portfolio-img" />
+                <p className="animated-gradient-text">{img.title}</p>
+                  <a href={`${img.link}`} target="_blank" rel="noopener noreferrer" className="btn-grad2">
+                    See Full Portfolio
+                  </a>
+
                 </div>
               </div>
             ))}

@@ -21,7 +21,13 @@ import Banner from './Pages/Banner';
 import Webdesign from './Pages/Webdesign';
 import Videoedit from './Pages/Videoedit';
 import SocialMedia from './Pages/SocialMedia';
-
+import SearchResults from './Components/SearchResults.jsx';
+import MultiServices from './Pages/MultiServices.jsx';
+import OnlineClass from './Pages/OnlineClass.jsx';
+import ClassDetail from './Pages/ClassDetail.jsx';
+import MetaAds from './Pages/MetaAds.jsx';
+import PresentationPage from './Pages/PresentationPage.jsx';
+//https://nrsaz.onrender.com
 
 function App() {
   return (
@@ -39,6 +45,10 @@ function App() {
           <Route path="/testomonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/quote" element={<Quote />} />
+           <Route path="/search" element={<SearchResults />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="/search" element={<SearchResults />} />
+        {/* Add your other routes here */}
           {/* Pages */}
           <Route path="/logodesign" element={<LogoDesign />} />
           <Route path="/posterdesign" element={<Posterdesign />} />
@@ -47,6 +57,12 @@ function App() {
           <Route path="/webdesign" element={<Webdesign />} />
           <Route path="/videoedit" element={<Videoedit />} />
           <Route path="/socialmedia" element={<SocialMedia />} />
+          <Route path="/MultiServices" element={<MultiServices />} />
+          <Route path="/online-class" element={<OnlineClass />} />
+          <Route path="/online-class/:classSlug" element={<ClassDetail />} />
+          <Route path="/services/meta-ads" element={<MetaAds />} />
+          <Route path="/presentations" element={<PresentationPage />} />
+
 
 
           

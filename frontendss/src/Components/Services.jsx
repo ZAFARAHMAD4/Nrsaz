@@ -20,14 +20,14 @@ function Services() {
       category: 'Website Design ',
       img: websiteIcon,
       description: 'We design and develop responsive, user-friendly websites to your business needs.',
-      buttonText: 'Learn More',
+      buttonText: 'See Templates',
       link:'webdesign'
     },
     {
       category: 'Logo Design',
       img: logoIcon,
       description: 'Create a unique and memorable logo that represents your brand’s identity.',
-      buttonText: 'See Examples',
+      buttonText: 'See Templates',
       link:'logodesign'
 
     },
@@ -35,7 +35,7 @@ function Services() {
       category: 'Social Media Graphics',
       img: socialMediaIcon,
       description: 'Craft engaging social media posts that  your brand’s voice and attract attention.',
-      buttonText: 'Learn More',
+      buttonText: 'See Templates',
       link:'socialmedia'
 
     },
@@ -43,15 +43,15 @@ function Services() {
       category: 'PPT Presentations',
       img: pptIcon,
       description: 'We create stunning and professional PowerPoint presentations to deliver your message effectively.',
-      buttonText: 'Order Now',
-      link:'logodesign'
+      buttonText: 'See Templates',
+      link:'presentations'
 
     },
     {
       category: 'Promotional Videos',
       img: promoVideoIcon,
       description: 'Create compelling promotional videos that help market your products and services.',
-      buttonText: 'Learn More',
+      buttonText: 'See Templates',
       link:'logodesign'
 
     },
@@ -59,7 +59,7 @@ function Services() {
       category: 'Video Editing & Reels',
       img: videoEditingIcon,
       description: 'Edit and enhance your video content to create polished and professional results.',
-      buttonText: 'Order Now',
+      buttonText: 'See Templates',
       link:'videoedit'
 
     },
@@ -68,7 +68,7 @@ function Services() {
       category: 'Poster Design Professional Adds',
       img: businessCardIcon,
       description: 'We offer unique business cards and complete branding kits to elevate your business identity.',
-      buttonText: 'See Examples',
+      buttonText: 'See Templates',
       link:'posterdesign'
 
     },
@@ -76,7 +76,7 @@ function Services() {
       category: 'Thumbnail Design Professional Adds',
       img: businessCardIcon,
       description: 'We offer unique business cards and complete branding kits to elevate your business identity.',
-      buttonText: 'See Examples',
+      buttonText: 'See Templates',
       link:'thumbnail'
 
     },
@@ -84,7 +84,7 @@ function Services() {
       category: 'Banner Design Professional Adds',
       img: businessCardIcon,
       description: 'We offer unique business cards and complete branding kits to elevate your business identity.',
-      buttonText: 'See Examples',
+      buttonText: 'See Templates',
       link:'banner'
 
     }

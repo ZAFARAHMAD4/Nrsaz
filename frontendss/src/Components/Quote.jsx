@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const res = await fetch('http://localhost:3000/send-quote', {
+    const res = await fetch('https://nrsaz.onrender.com/send-quote', {
       method: 'POST',
       body: formData,
     });

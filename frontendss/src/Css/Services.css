@@ -85,3 +85,53 @@
 /* .service-card:hover img {
   transform: scale(1.1);  
 } */
+.services-page {
+  background: #f8f9fa;
+}
+
+.service-card {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+         .btn-grad6 {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+         .btn-grad6 {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            text-decoration: none;
+          }
+
+          .btn-grad6:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         

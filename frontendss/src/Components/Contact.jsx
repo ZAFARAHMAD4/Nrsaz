@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import '../Css/Contact.css';
 
 function Contact() {
@@ -22,7 +23,7 @@ function Contact() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/send', {
+      const res = await fetch('https://nrsaz.onrender.com/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -112,17 +113,23 @@ function Contact() {
               loading="lazy"
             ></iframe>
           </div>
+ <div className="contact-details">
+      <p>
+        <strong>
+          <FaPhoneAlt style={{ marginRight: '8px' }} />
+          Phone:
+        </strong>{' '}
+        +91-786 024 8287
+      </p>
+      <p>
+        <strong>
+          <FaEnvelope style={{ marginRight: '8px' }} />
+          Email:
+        </strong>{' '}
+        arnrsaz@gmail.com
+      </p>
+    </div>
 
-          <div className="contact-details">
-            <p><strong>Phone:</strong> +91-9876543210</p>
-            <p><strong>Email:</strong> contact@arnrsaz.com</p>
-            <div className="social-links">
-              <a href="#" target="_blank" rel="noreferrer">Facebook</a>
-              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="#" target="_blank" rel="noreferrer">YouTube</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

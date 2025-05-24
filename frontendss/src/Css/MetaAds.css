@@ -1,0 +1,24 @@
+.meta-ads-page {
+  background-color: #f7f9fc;
+}
+
+.meta-ads-page .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.meta-ads-page .card:hover {
+  transform: translateY(-5px);
+}
+
+.meta-ads-page video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.meta-ads-page .card-body {
+  padding: 15px;
+}

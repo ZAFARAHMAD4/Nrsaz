@@ -114,11 +114,6 @@ h2 {
 }
 
 /* Portfolio Section */
-.portfolio-img-container {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
 
 .portfolio-img {
   width: 100%;
@@ -319,4 +314,97 @@ h2 {
   .hero-section {
     padding: 40px 10px;
   }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4facfe, #00f2fe);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradientMove 8s ease infinite;
+  font-weight: bold; /* optional */
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.portfolio-img-container {
+  text-align: center; /* Horizontally center all content inside */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+
+}
+
+.btn-grad2 {
+  margin-top: 10px;
+  padding: 8px 16px;
+  text-decoration: none; /* Removes underline */
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg, #6e48aa, #9d50bb);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.btn-grad2:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #9d50bb, #6e48aa);
+}
+.portfolio-img-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Crop and fill evenly */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.animated-gradient-text {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn-grad2 {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg, #6e48aa, #9d50bb);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-grad2:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #9d50bb, #6e48aa);
 }
