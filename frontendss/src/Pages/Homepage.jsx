@@ -12,12 +12,18 @@ import videoEditingImg from '../Images/videoediting.png';
 // portfolio img
 import portfolio1 from '../Images/arihaportfolio.png'
 import portfolio2 from '../Images/miznaportfolio.png'
+import { useState } from 'react';
+
+import ReviewSection from './ReviewSection.jsx';
 
 
 function Homepage() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+      const [reload, setReload] = useState(false);
+  
+    const triggerReload = () => setReload(!reload);
 
 const services = [
   { title: 'Web Design', img: webDesignImg },
@@ -124,6 +130,8 @@ const services = [
           <button type="submit">Subscribe</button>
         </form>
       </section>
+          <ReviewSection onReviewSubmit={triggerReload} />
+          
     </div>
   );
 }

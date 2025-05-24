@@ -27,9 +27,14 @@ import OnlineClass from './Pages/OnlineClass.jsx';
 import ClassDetail from './Pages/ClassDetail.jsx';
 import MetaAds from './Pages/MetaAds.jsx';
 import PresentationPage from './Pages/PresentationPage.jsx';
+
+import { useState } from 'react';
 //https://nrsaz.onrender.com
 
 function App() {
+    const [reload, setReload] = useState(false);
+
+  const triggerReload = () => setReload(!reload);
   return (
     <div className="App">
     <BrowserRouter>
@@ -62,6 +67,8 @@ function App() {
           <Route path="/online-class/:classSlug" element={<ClassDetail />} />
           <Route path="/services/meta-ads" element={<MetaAds />} />
           <Route path="/presentations" element={<PresentationPage />} />
+
+
 
 
 

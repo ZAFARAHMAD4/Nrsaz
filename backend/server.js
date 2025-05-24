@@ -2,36 +2,41 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const multer = require("multer");
 const sendQuote = require("./Controllers/sendQuote");
-const sendOrder=require("./Controllers/sendOrder")
+const sendOrder = require("./Controllers/sendOrder");
+const sendMail = require('./Controllers/sendMail');
 const cors = require('cors');
-const connectedDB = require("../backend/Config/db")
-const users = require("./Routers/route")
-
-
+const connectedDB = require("../backend/Config/db");
+const users = require("./Routers/route");
+const reviewRoutes = require("./Routers/reviewRoutes"); // ✅ Add this
 
 const app = express();
-//body parser
+const port = 3000;
+
+// Middleware
 app.use(cors());
 app.use(express.json());
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
-const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+// Connect to DB
 connectedDB();
 
-app.use('/api',users)
-
-const sendMail = require('./Controllers/sendMail');
+// Existing routes
+app.use('/api', users);
 app.post('/send-quote', upload.single('file'), sendQuote);
 app.post('/sendorder', sendOrder);
-app.post('/send', sendMail); // ✅ Make sure it's POST
+app.post('/send', sendMail);
 
-app.get('/', (req,res)=>{
-      res.send("hello")
-})
+// ✅ Add review routes
+app.use('/api', reviewRoutes);
 
-app.listen(port,()=>{
-      console.log("server is start",port);
-      
-})
+app.get('/', (req, res) => {
+  res.send("hello");
+});
+
+app.listen(port, () => {
+  console.log("server is start", port);
+});
